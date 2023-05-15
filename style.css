@@ -1,0 +1,643 @@
+/*------ RESET GENERAL TODAS LAS PAGINAS------*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*------ GENERAL ATRIBUTOS BODY TODAS LAS PAGINAS ------*/
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url("./images/cloudsbackjpg.jpg");
+}
+
+/*------ ATRIBUTOS HEADER + BARRA DE NAVEGACION TODAS LAS PAGINAS ------*/
+header {
+    display: flex;
+    align-items: center;
+    padding: .5rem 2rem;
+    justify-content: space-between;
+    background-color: #c1dcf0f6;
+    width: 100%;
+    height: 100px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/*------ ATRIBUTOS DE BARRA DE NAVEGACION SUPERIOR TODAS LAS PAGINAS ------*/
+/*------ LOGO ------*/
+
+.headerLogo img {
+    height: 80px;
+    transition: .3s linear;
+    padding: 0 10px;
+}
+
+.headerLogo img:hover {
+    transform: scale(1.1);
+    filter: opacity(50%);
+}
+
+.navMenu ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    min-height: 90px;
+}
+
+.navMenu ul li {
+    margin-right: 1.5rem;
+    transition: .5s linear;
+}
+
+.navMenu ul li:hover {
+    transform: scale(1.2);
+}
+
+.navMenu ul li a {
+    font-family: 'Roboto', sans-serif;
+    color: #1D71B8;
+    text-decoration: none;
+    font-size: 13pt;
+    font-weight: bold;
+    padding: 5px 20px;
+}
+
+
+
+.navMenu ul li a:hover {
+    color: rgb(6, 34, 42);
+    transform: scale(1.2);
+    filter: opacity(50%);
+}
+
+
+.menu-icon,
+#check {
+    display: none;
+}
+
+
+/*------ ATRIBUTOS CABECERA TITULO TEXTO OVER IMAGE CARRUSEL ------*/
+.cabeceraIndex {
+    position: relative;
+    width: 100%;
+
+}
+
+.cabeceraTitulo {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 90pt;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0, -50%);
+}
+
+/*------ ATRIBUTOS AÑADIDOS IMAGENES CARRUSEL CABECERA INDEX ------*/
+.controlImagen {
+    height: 600px;
+}
+
+.controlImagen img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.controlImagen::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(0deg, #1f212d4a, #1e283a3f);
+}
+
+
+/*------ ATRIBUTOS "SECTIONS O CARDS" ORIENTADAS A IZQUIERDA (INDEX) ------*/
+.cardIzquierda {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.cardIzquierdaImagen {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    height: 60%;
+    padding: 0 0 0 25px;
+}
+
+.cardIzquierdaImagen img {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+}
+
+.cardIzquierdaTextos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    padding: 0 25px 0 0;
+}
+
+.cardIzquierdaTextosFondo {
+    background-color: #b8dafff9;
+    border-radius: 0 50px 50px 0;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardIzquierda h1 {
+    padding: 25px 0 0 20px;
+    font-weight: 800;
+    font-size: 20pt;
+    color: #1D71B8;
+}
+
+.cardIzquierda h4 {
+    font-weight: 300;
+    font-size: 15pt;
+    padding: 0 15px 10px 20px;
+}
+
+/*------ ATRIBUTOS "SECTIONS O CARDS" ORIENTADAS A DERECHA (INDEX) ------*/
+.cardDerecha {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    padding: 40px 0;
+}
+
+.cardDerechaImagen {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 50%;
+    height: 60%;
+    padding: 0 25px 0 0;
+}
+
+.cardDerechaImagen img {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+}
+
+.cardDerechaTextos {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    padding: 0 0 0 25px;
+    text-align: end;
+}
+
+.cardDerechaTextosFondo {
+    background-color: #b8dafff9;
+    border-radius: 50px 0 0 50px;
+    padding: 5px 10px;
+}
+
+.cardDerecha h1 {
+    padding: 25px 20px 0 0px;
+    font-weight: 800;
+    font-size: 20pt;
+    color: #1D71B8;
+}
+
+.cardDerecha h4 {
+    font-weight: 300;
+    font-size: 15pt;
+    padding: 0 20px 10px 15px;
+}
+
+/*------ ATRIBUTOS SECTION INFERIOR BODY INFO "EXCELENCIA" (INDEX) ------*/
+.infoDown {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    background-color: #a6edfaaf;
+    height: 400px;
+    width: 100%;
+}
+
+.infoDownTitulo {
+    font-family: 'Roboto', sans-serif;
+    color: #0e0e5b;
+    font-weight: 700;
+    font-size: 30pt;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+}
+
+.infoDownCards {
+    display: flex;
+    justify-content: center;
+}
+
+.InfoDownCardsPosition {
+    padding: 0;
+}
+
+.InfoDownCardsPosition img {
+    width: 225px;
+    transition: .5s linear;
+}
+
+.InfoDownCardsPosition img:hover {
+    color: rgb(6, 34, 42);
+    transform: scale(1.2);
+    filter: opacity(50%);
+}
+
+.infoDownTextos {
+    color: #343964;
+    font-weight: 400;
+    font-size: 20pt;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/*------ ATRIBUTOS GRILLA + FLEX INFERIOR DE PAGINA - DATOS CONTACTO + COPYRIGHT ------*/
+
+.gridFooter {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 10pt;
+    display: grid;
+    background-color: #96b8eaa5;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 3fr 1fr 1fr;
+    gap: 1px 1px;
+    padding: 10px 0 0 0;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "ubicacionTitulo horarioTitulo contactoTitulo"
+        "ubicacionMapa horarioTexto contactoTexto"
+        "ubicacionTexto ... redesSociales"
+        "footerPage footerPage footerPage";
+    width: 100%;
+    height: 450px;
+}
+
+.gridFooter img {
+    width: 3rem;
+    height: 3rem;
+    padding: 2px 2px;
+}
+
+.ubicacionTitulo {
+    grid-area: ubicacionTitulo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CLASE APLICADA PARA CORREGIR ATRIBUTO HECHO POR BOOTSTRAP SOBRE <P> QUE NO ME PERMITE ALINEAR */
+.tituloParagraph {
+    margin-bottom: 0;
+}
+
+.tituloParagraphEstilo {
+    color: #1e3261;
+    font-weight: bold;
+    font-size: 15pt;
+    text-transform: uppercase;
+}
+
+.horarioTitulo {
+    grid-area: horarioTitulo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactoTitulo {
+    grid-area: contactoTitulo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ubicacionMapa {
+    grid-area: ubicacionMapa;
+    justify-self: center;
+    align-self: center;
+}
+
+.horarioTexto {
+    grid-area: horarioTexto;
+    justify-self: center;
+    align-self: center;
+}
+
+.horarioTexto ul {
+    list-style-type: none;
+}
+
+.horarioTexto li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.contactoTexto {
+    grid-area: contactoTexto;
+    justify-self: center;
+    align-self: center;
+}
+
+.ubicacionContactoTexto {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+.ubicacionContactoTexto img {
+    width: 30px;
+    height: 30px;
+}
+
+.ubicacionTexto {
+    grid-area: ubicacionTexto;
+    justify-self: center;
+    align-self: center;
+}
+
+.redesSociales {
+    grid-area: redesSociales;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*------ ATRIBUTOS CREDITOS DE AUTOR WEB TODAS LAS PAGINAS ------*/
+.footerPage {
+    grid-area: footerPage;
+    background-color: black;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    align-self: center;
+    padding: 10px;
+    color: azure;
+}
+
+/*---------                   --------*/
+/*--------- RESPONSIVE 425 px --------*/
+/*---------                   --------*/
+
+
+@media screen and (max-width: 425px) {
+    header{
+        padding: 0 0 0 10px;
+        width: 100%;
+        height: 80px;
+    }
+
+    .cabeceraTitulo {
+        font-weight: 800;
+        font-size: 30pt;
+        top: 50%;
+        left: 5%;
+        transform: translate(0, -50%);
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    .menu-icon {
+        display: flex;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+
+    .headerLogo img {
+        height: 40px;
+    }
+
+    .navMenu ul {
+        display: block;
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        background: #c1dcf0f6;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+    }
+
+    .navMenu ul li {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    #check:checked~ul {
+        left: 0;
+        transition: all .25s;
+    }
+
+    .infoDown{
+        height: 100%;
+    }
+
+    .infoDownTitulo {
+        font-weight: 300;
+        font-size: 15pt;
+        text-align: center;
+        padding: 5px;
+    }
+        
+    .InfoDownCardsPosition {
+        align-self: center;
+        padding: 0;
+    }
+    
+    .InfoDownCardsPosition img {
+        width: 100px;
+        transition: .5s linear;
+    }
+    
+    .InfoDownCardsPosition img:hover {
+        color: rgb(6, 34, 42);
+        transform: scale(1.2);
+        filter: opacity(50%);
+    }
+    
+    .infoDownTextos {
+        color: #343964;
+        font-weight: 300;
+        font-size: 10pt;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    .gridFooter{
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+    
+    .ubicacionTitulo {
+        padding: 10px;
+    }
+    
+    .tituloParagraphEstilo {
+        color: #1e3261;
+        font-weight: bold;
+        font-size: 10pt;
+        text-transform: uppercase;
+    }
+    
+    .horarioTitulo {
+        padding: 10px;
+    }
+    
+    .contactoTitulo {
+        padding: 10px;
+    }
+    
+    .ubicacionMapa {
+        justify-self: center;
+        align-self: center;
+    }
+    
+    .horarioTexto {
+        justify-self: center;
+        align-self: center;
+    }
+    
+    .horarioTexto li {
+        text-align: center;
+    }
+    
+    .contactoTexto {
+        justify-self: center;
+        align-self: center;
+    }
+    
+    .ubicacionContactoTexto {
+        text-align: center;
+    }
+    
+    .ubicacionContactoTexto img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .ubicacionTexto {
+        text-align: center;
+    }
+    
+    .redesSociales {
+        background-color: #98efe6;
+        width: 100%;
+    }
+
+    .footerPage {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .cardIzquierda {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2px;
+    }
+    
+    .cardIzquierdaImagen {
+        width: 100%;
+        height: 60%;
+        padding: 10px;
+    }
+    
+    .cardIzquierdaImagen img {
+        width: 100%;
+        height: 100%;
+        border-radius: 35px;
+    }
+    
+    .cardIzquierdaTextos {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .cardIzquierdaTextosFondo {
+        background-color: #b8dafff9;
+        border-radius: 25px;
+
+    }
+    
+    .cardIzquierda h1 {
+        font-weight: 600;
+        font-size: 20pt;
+        color: #1D71B8;
+    }
+    
+    .cardIzquierda h4 {
+        font-weight: 200;
+        font-size: 10pt;
+        padding: 10px;
+    }
+
+
+    .cardDerecha {
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 2px;
+    }
+    
+    .cardDerechaImagen {
+        width: 100%;
+        height: 60%;
+        padding: 10px;
+    }
+    
+    .cardDerechaImagen img {
+        width: 100%;
+        height: 100%;
+        border-radius: 35px;
+    }
+    
+    .cardDerechaTextos {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .cardDerechaTextosFondo {
+        background-color: #b8dafff9;
+        border-radius: 25px;
+    }
+    
+    .cardDerecha h1 {
+        font-weight: 600;
+        font-size: 20pt;
+        color: #1D71B8;
+    }
+    
+    .cardDerecha h4 {
+        font-weight: 200;
+        font-size: 10pt;
+        padding: 10px;
+    }
+}
