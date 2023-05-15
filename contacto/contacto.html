@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./images/Logo-GoFly.png">
+    <link rel="icon" href="../images/Logo-GoFly.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -52,39 +52,68 @@
     </main>
 
     <footer>
-        <!-- FOOTER CON DATOS DE LOCALIZACIÓN, HORARIOS Y CONTACTOS -->
-        <section class="footer">
-            <div class="footerDownCards">
-                <div class="footerCardsPositions">
-                    <div class="footerTextProperties">
-                        <p>Localización</p>
-                    </div>
-                    <img src="https://placehold.co/200x200?text=Location" alt="">
-
+        <!-- FOOTER CON DATOS DE LOCALIZACIÓN, HORARIOS Y CONTACTOS/ FORMATO GRILLA + FLEX -->
+        <div class="gridFooter">
+            <div class="ubicacionTitulo">
+                <img src="../images/iconoUbicacion.png" alt="Titulo Ubicación">
+                <p class="tituloParagraph tituloParagraphEstilo">Ubicación</p>
+            </div>
+            <div class="ubicacionMapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5162.387183022348!2d-58.583273337876825!3d-34.45499822296017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca5176e8d535f%3A0x1f3829912ba9bc9a!2sAeropuerto%20Internacional%20de%20San%20Fernando!5e0!3m2!1ses!2sar!4v1684106347764!5m2!1ses!2sar"
+                    width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="ubicacionTexto">
+                <p class="tituloParagraph">Av. Hipólito Yrigoyen S/N<br>(CP 1646) San Fernando - Bs. As.</p>
+            </div>
+            <div class="horarioTitulo">
+                <img src="../images/iconoDisponibilidad.png" alt="Titulo Ubicación">
+                <p class="tituloParagraph tituloParagraphEstilo">Disponibilidad</p>
+            </div>
+            <div class="horarioTexto">
+                <ul>
+                    <li>Servicios charter: 24/7</li>
+                    <li>Avión Ambulancia: 24/7</li>
+                    <li>Escuela de Vuelo: L a V (8 a 20hs)</li>
+                    <li>Administración: L a V (10 a 17hs)</li>
+                </ul>
+            </div>
+            <div class="contactoTitulo">
+                <img src="../images/iconoContacto.png" alt="Titulo Ubicación">
+                <p class="tituloParagraph tituloParagraphEstilo">Contacto</p>
+            </div>           
+            <div class="contactoTexto">
+                <div class="ubicacionContactoTexto">
+                    <img src="../images/iconoTelefono.png" alt="Telefono">
+                    <p class="tituloParagraph">(011) 4567-8901</p>
                 </div>
-                    <div class="footerCardsPositions">
-                    <div class="footerTextProperties">
-                        <p>Disponibilidad</p>
-                    </div>    
-                    <img src="https://placehold.co/200x200?text=Horarios" alt="">
-
-                </div>       
-                    <div class="footerCardsPositions">
-                    <div class="footerTextProperties">
-                        <p>Contacto/Social</p>
-                    </div>                        
-                    <img src="https://placehold.co/200x200?text=Contacto" alt="">
-
+                <div class="ubicacionContactoTexto">
+                    <img src="../images/iconoWhatsapp.png" alt="WhatsApp">
+                    <p class="tituloParagraph">(011) 3344-5577</p>
+                </div>
+                <div class="ubicacionContactoTexto">
+                    <img src="../images/iconoEmail.png" alt="Email">
+                    <p class="tituloParagraph">contacto@gofly.com.ar</p>
                 </div>
             </div>
-        </section>
+            <div class="redesSociales">
+                <p class="tituloParagraph">Seguinos en nuestras redes:</p>
+                <a href="#"><img src="../images/iconoFacebook.png" alt="Facebook"></a>
+                <a href="#"><img src="../images/iconoInstagram.png" alt="Instagram"></a>
+            </div>
 
-        <!-- CREDITOS DE AUTOR DE WEB -->
-        <section class="credits">
-            <p>2023 - Diseñado por Trinium Web Design</p>
-        </section>
 
+            <!-- CREDITOS DE AUTOR DE WEB -->
+            <section class="footerPage">
+                <p class="tituloParagraph">2023 - Diseñado por Trinium Web Design</p>
+            </section>
+        </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 
 </body>
 </html>
