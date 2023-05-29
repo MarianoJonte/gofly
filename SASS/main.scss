@@ -1,122 +1,10 @@
-/*------ RESET GENERAL TODAS LAS PAGINAS------*/
-* {
-    padding: 0;
-    margin: 0;
-}
+$fuente_principal: 'Roboto', sans-serif;
+$color_de_fondo: #c1dcf0f6;
 
-/*------ GENERAL ATRIBUTOS BODY TODAS LAS PAGINAS ------*/
-body {
-    font-family: 'Roboto', sans-serif;
-    background: white url("./images/cloudsbackjpg.jpg");
-}
-
-/*------ ATRIBUTOS HEADER + BARRA DE NAVEGACION TODAS LAS PAGINAS ------*/
-header {
-    display: flex;
-    align-items: center;
-    padding: .5rem 2rem;
-    justify-content: space-between;
-    background-color: #c1dcf0f6;
-    width: 100%;
-    height: 100px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-/*------ ATRIBUTOS DE BARRA DE NAVEGACION SUPERIOR TODAS LAS PAGINAS ------*/
-/*------ LOGO ------*/
-
-.headerLogo img {
-    height: 80px;
-    transition: .3s linear;
-    padding: 0 10px;
-}
-
-.headerLogo img:hover {
-    transform: scale(1.1);
-    filter: opacity(50%);
-}
-
-.navMenu ul {
-    display: flex;
-    list-style: none;
-    align-items: center;
-    min-height: 90px;
-}
-
-.navMenu ul li {
-    margin-right: 1.5rem;
-    transition: .5s linear;
-}
-
-.navMenu ul li:hover {
-    transform: scale(1.2);
-}
-
-.navMenu ul li a {
-    font-family: 'Roboto', sans-serif;
-    color: #1D71B8;
-    text-decoration: none;
-    font-size: 13pt;
-    font-weight: bold;
-    padding: 5px 20px;
-}
-
-
-
-.navMenu ul li a:hover {
-    color: rgb(6, 34, 42);
-    transform: scale(1.2);
-    filter: opacity(50%);
-}
-
-
-.menu-icon,
-#check {
-    display: none;
-}
-
-
-/*------ ATRIBUTOS CABECERA TITULO TEXTO OVER IMAGE CARRUSEL ------*/
-.cabeceraIndex {
-    position: relative;
-    width: 100%;
-
-}
-
-.cabeceraTitulo {
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff;
-    font-weight: 900;
-    font-size: 90pt;
-    text-transform: uppercase;
-    position: absolute;
-    top: 50%;
-    left: 5%;
-    transform: translate(0, -50%);
-}
-
-/*------ ATRIBUTOS AÑADIDOS IMAGENES CARRUSEL CABECERA INDEX ------*/
-.controlImagen {
-    height: 600px;
-}
-
-.controlImagen img {
-    height: 100%;
-    object-fit: cover;
-}
-
-.controlImagen::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    background-image: linear-gradient(0deg, #23366eca, #40567e71);
-}
-
+@import "_reset.scss";
+@import "_header.scss";
+@import "_cabecera.scss";
+@import "_responsive768.scss";
 
 /*------ ATRIBUTOS "SECTIONS O CARDS" ORIENTADAS A IZQUIERDA (INDEX) ------*/
 .cardIzquierda {
@@ -650,6 +538,8 @@ details[open] {
     color: azure;
 }
 
+
+
 /*---------                          --------*/
 /*--------- RESPONSIVE 480 px MOBILE --------*/
 /*---------                          --------*/
@@ -976,6 +866,7 @@ details[open] {
     }
 
 }
+
 
 
 /*---------                                     --------*/

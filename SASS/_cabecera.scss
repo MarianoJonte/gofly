@@ -1,0 +1,38 @@
+/*------ ATRIBUTOS CABECERA TITULO TEXTO OVER IMAGE CARRUSEL ------*/
+.cabeceraIndex {
+    position: relative;
+    width: 100%;
+
+}
+
+.cabeceraTitulo {
+    font-family: 'Roboto', sans-serif;
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 90pt;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(0, -50%);
+}
+
+/*------ ATRIBUTOS AÑADIDOS IMAGENES CARRUSEL CABECERA INDEX ------*/
+.controlImagen {
+    height: 600px;
+}
+
+.controlImagen img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.controlImagen::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-image: linear-gradient(0deg, #23366eca, #40567e71);
+}

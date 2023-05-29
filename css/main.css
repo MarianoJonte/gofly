@@ -1,0 +1,1756 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: white url("./images/cloudsbackjpg.jpg");
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: rgba(193, 220, 240, 0.9647058824);
+  width: 100%;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/*------ ATRIBUTOS DE BARRA DE NAVEGACION SUPERIOR TODAS LAS PAGINAS ------*/
+/*------ LOGO ------*/
+.headerLogo img {
+  height: 80px;
+  -webkit-transition: 0.3s linear;
+  transition: 0.3s linear;
+  padding: 0 10px;
+}
+
+.headerLogo img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: opacity(50%);
+          filter: opacity(50%);
+}
+
+.navMenu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 90px;
+}
+
+.navMenu ul li {
+  margin-right: 1.5rem;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.navMenu ul li:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.navMenu ul li a {
+  font-family: "Roboto", sans-serif;
+  color: #1D71B8;
+  text-decoration: none;
+  font-size: 13pt;
+  font-weight: bold;
+  padding: 5px 20px;
+}
+
+.navMenu ul li a:hover {
+  color: rgb(6, 34, 42);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-filter: opacity(50%);
+          filter: opacity(50%);
+}
+
+.menu-icon,
+#check {
+  display: none;
+}
+
+/*------ ATRIBUTOS CABECERA TITULO TEXTO OVER IMAGE CARRUSEL ------*/
+.cabeceraIndex {
+  position: relative;
+  width: 100%;
+}
+
+.cabeceraTitulo {
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 90pt;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+
+/*------ ATRIBUTOS AÑADIDOS IMAGENES CARRUSEL CABECERA INDEX ------*/
+.controlImagen {
+  height: 600px;
+}
+
+.controlImagen img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.controlImagen::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(35, 54, 110, 0.7921568627)), to(rgba(64, 86, 126, 0.4431372549)));
+  background-image: linear-gradient(0deg, rgba(35, 54, 110, 0.7921568627), rgba(64, 86, 126, 0.4431372549));
+}
+
+/*---------                                     --------*/
+/*--------- RESPONSIVE 481 px - 768 px TABLET   --------*/
+/*---------                                     --------*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    padding: 0 0 0 10px;
+    width: 100%;
+    height: 100px;
+  }
+  .cabeceraTitulo {
+    font-weight: 800;
+    font-size: 50pt;
+    top: 50%;
+    left: 5%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  .checkbtn {
+    display: block;
+  }
+  .menu-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  .headerLogo img {
+    height: 60px;
+  }
+  .navMenu ul {
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    background: rgba(193, 220, 240, 0.9647058824);
+    width: 100%;
+    height: 100vh;
+    right: 0;
+  }
+  .navMenu ul li {
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+  }
+  #check:checked ~ ul {
+    left: 0;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+  }
+  .infoDown {
+    height: 100%;
+  }
+  .infoDownTitulo {
+    font-weight: 300;
+    font-size: 15pt;
+    text-align: center;
+    padding: 5px;
+  }
+  .InfoDownCardsPosition {
+    -ms-flex-item-align: center;
+        align-self: center;
+    padding: 0;
+  }
+  .InfoDownCardsPosition img {
+    width: 100px;
+    -webkit-transition: 0.5s linear;
+    transition: 0.5s linear;
+  }
+  .InfoDownCardsPosition img:hover {
+    color: rgb(6, 34, 42);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+  .infoDownTextos {
+    color: #343964;
+    font-weight: 300;
+    font-size: 12pt;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .gridFooter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .ubicacionTitulo {
+    padding: 10px;
+  }
+  .tituloParagraphEstilo {
+    color: #1e3261;
+    font-weight: bold;
+    font-size: 10pt;
+    text-transform: uppercase;
+  }
+  .horarioTitulo {
+    padding: 10px;
+  }
+  .contactoTitulo {
+    padding: 10px;
+  }
+  .ubicacionMapa {
+    justify-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .horarioTexto {
+    justify-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .horarioTexto li {
+    text-align: center;
+  }
+  .contactoTexto {
+    justify-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .ubicacionContactoTexto {
+    text-align: center;
+  }
+  .ubicacionContactoTexto img {
+    width: 30px;
+    height: 30px;
+  }
+  .ubicacionTexto {
+    text-align: center;
+  }
+  .redesSociales {
+    background-color: #98efe6;
+    width: 100%;
+  }
+  .footerPage {
+    padding: 10px;
+    width: 100%;
+  }
+  .cardIzquierda {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2px;
+  }
+  .cardIzquierdaImagen {
+    width: 100%;
+    height: 60%;
+    padding: 10px;
+  }
+  .cardIzquierdaImagen img {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+  }
+  .cardIzquierdaTextos {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .cardIzquierdaTextosFondo {
+    background-color: rgba(184, 218, 255, 0.9764705882);
+    border-radius: 25px;
+  }
+  .cardIzquierda h1 {
+    font-weight: 600;
+    font-size: 25pt;
+    color: #1D71B8;
+  }
+  .cardIzquierda h4 {
+    font-weight: 200;
+    font-size: 10pt;
+    padding: 10px;
+  }
+  .cardDerecha {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2px;
+  }
+  .cardDerechaImagen {
+    width: 100%;
+    height: 60%;
+    padding: 10px;
+  }
+  .cardDerechaImagen img {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+  }
+  .cardDerechaTextos {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .cardDerechaTextosFondo {
+    background-color: rgba(184, 218, 255, 0.9764705882);
+    border-radius: 25px;
+  }
+  .cardDerecha h1 {
+    font-weight: 600;
+    font-size: 20pt;
+    color: #1D71B8;
+  }
+  .cardDerecha h4 {
+    font-weight: 200;
+    font-size: 10pt;
+    padding: 10px;
+  }
+  .cursosEscuela {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px 0 0 0;
+  }
+  .cursosEscuelaCard {
+    width: 90%;
+    margin: 25px;
+    font-family: "Roboto", sans-serif;
+  }
+  .cursosEscuelaCard img {
+    padding: 8px;
+    width: 70%;
+  }
+  .cursosEscuelaTitulo {
+    font-weight: 800;
+    font-size: 15pt;
+  }
+  .cursosEscuelaTexto {
+    font-weight: 300;
+    font-size: 10pt;
+    padding: 0 15%;
+  }
+  .requisitosEscuela {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .textoRequisitosEscuela {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .textoRequisitosEscuela ul {
+    width: 100%;
+  }
+  .testimonios {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .titleTestimonios p {
+    font-weight: 800;
+    font-size: 15pt;
+  }
+  .testimoniosEscuela {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .testimoniosEscuelaCard {
+    width: 90%;
+  }
+  .testimoniosEscuelaCard p {
+    font-size: 10pt;
+  }
+  .testimoniosEscuelaCardData img {
+    padding: 10px 15px 5px 25px;
+    width: 10vh;
+  }
+}
+/*------ ATRIBUTOS "SECTIONS O CARDS" ORIENTADAS A IZQUIERDA (INDEX) ------*/
+.cardIzquierda {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.cardIzquierdaImagen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: 100%;
+  padding: 0 0 0 25px;
+}
+
+.cardIzquierdaImagen img {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+}
+
+.cardIzquierdaTextos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  padding: 0 25px 0 0;
+}
+
+.cardIzquierdaTextosFondo {
+  background-color: rgba(184, 218, 255, 0.9764705882);
+  border-radius: 0 50px 50px 0;
+  padding: 5px 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cardIzquierda h1 {
+  padding: 25px 0 0 20px;
+  font-weight: 800;
+  font-size: 20pt;
+  color: #1D71B8;
+}
+
+.cardIzquierda h4 {
+  font-weight: 300;
+  font-size: 15pt;
+  padding: 0 15px 10px 20px;
+}
+
+/*------ ATRIBUTOS "SECTIONS O CARDS" ORIENTADAS A DERECHA (INDEX) ------*/
+.cardDerecha {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.cardDerechaImagen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  height: 60%;
+  padding: 0 25px 0 0;
+}
+
+.cardDerechaImagen img {
+  width: 100%;
+  height: 100%;
+  border-radius: 35px;
+}
+
+.cardDerechaTextos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  padding: 0 0 0 25px;
+  text-align: end;
+}
+
+.cardDerechaTextosFondo {
+  background-color: rgba(184, 218, 255, 0.9764705882);
+  border-radius: 50px 0 0 50px;
+  padding: 5px 10px;
+}
+
+.cardDerecha h1 {
+  padding: 25px 20px 0 0px;
+  font-weight: 800;
+  font-size: 20pt;
+  color: #1D71B8;
+}
+
+.cardDerecha h4 {
+  font-weight: 300;
+  font-size: 15pt;
+  padding: 0 20px 10px 15px;
+}
+
+/*------ ATRIBUTOS SECTION ESCUELA DE VUELO - CARDS ------*/
+.cursosEscuela {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 25px 0 0 0;
+}
+
+.cursosEscuelaCard {
+  background-color: rgba(184, 218, 255, 0.9764705882);
+  border-radius: 25px;
+  text-align: center;
+  width: 50%;
+  margin: 0 25px;
+  font-family: "Roboto", sans-serif;
+}
+
+.cursosEscuelaCard img {
+  padding: 10px;
+  width: 30%;
+}
+
+.cursosEscuelaTitulo {
+  font-weight: 800;
+  font-size: 20pt;
+  color: #1D71B8;
+}
+
+.cursosEscuelaTexto {
+  font-weight: 300;
+  font-size: 15pt;
+  padding: 0 15%;
+}
+
+/*------ ATRIBUTOS SECTION REQUISITOS DE ESCUELA DE VUELO ------*/
+.requisitosEscuela {
+  background-color: rgba(208, 227, 238, 0.9764705882);
+  margin: 25px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.tituloRequisitosEscuela {
+  padding: 15px 0 0 35px;
+  font-weight: 800;
+  font-size: 20pt;
+  color: #1D71B8;
+}
+
+.textoRequisitosEscuela {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.textoRequisitosEscuela ul {
+  width: 50%;
+  list-style-type: none;
+}
+
+.textoRequisitosEscuela p {
+  font-weight: 300;
+  font-size: 15pt;
+  padding: 0 10% 0 0;
+}
+
+/*------ ATRIBUTOS SECTION PREGUNTAS FRECUENTES DE ESCUELA DE VUELO ------*/
+.preguntasFrecuentes {
+  background-color: rgba(166, 237, 250, 0.6862745098);
+  margin: 25px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.preguntasFrecuentes div p {
+  padding: 15px 0 0 35px;
+  font-weight: 800;
+  font-size: 20pt;
+  color: #1D71B8;
+}
+
+details {
+  list-style-image: none;
+  padding: 5px 0 20px 20px;
+}
+
+details summary {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 15pt;
+  list-style: none;
+  cursor: pointer;
+}
+
+details summary::before {
+  content: "▶";
+  padding: 10px;
+}
+
+details p {
+  font-weight: 500;
+  font-size: 15pt;
+  padding: 0 0 0 50px;
+}
+
+details[open] {
+  background: rgba(166, 237, 250, 0.9647058824);
+  /* color de fondo cuando está desplegado */
+}
+
+/*------ ATRIBUTOS SECTION TESTIMONIOS DE ESCUELA DE VUELO ------*/
+.testimonios {
+  background-color: rgba(175, 201, 216, 0.9764705882);
+  margin: 25px;
+  border-radius: 25px;
+}
+
+.titleTestimonios p {
+  padding: 15px 0 0 35px;
+  font-weight: 800;
+  font-size: 20pt;
+  color: #1D71B8;
+  margin-bottom: 0;
+}
+
+.testimoniosEscuela {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.testimoniosEscuelaCard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(207, 235, 250, 0.9764705882);
+  border-radius: 25px;
+  text-align: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  width: 100%;
+  margin: 25px;
+}
+
+.testimoniosEscuelaCard p {
+  font-weight: 300;
+  font-size: 12pt;
+  font-style: italic;
+  margin: 10px;
+}
+
+.testimoniosEscuelaCardData {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.testimoniosEscuelaCardData img {
+  padding: 15px 20px 10px 50px;
+  width: 30vh;
+}
+
+.testimoniosEscuelaCardData div h2 {
+  font-weight: 500;
+  font-size: 15pt;
+}
+
+.testimoniosEscuelaCardData div h4 {
+  font-weight: 300;
+  font-size: 10pt;
+}
+
+/*------ ATRIBUTOS SECTION FLOTA DE LA ESCUELA/EMPRESA ------*/
+.flota {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 20px;
+}
+
+.flotaCard {
+  background-color: rgba(184, 218, 255, 0.9764705882);
+  border-radius: 25px;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
+}
+
+.flotaCard img {
+  padding: 10px;
+  width: 100%;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.flotaCardTitulo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 15px 0 30px;
+}
+
+.flotaCardTitulo h2 {
+  color: #1D71B8;
+  font-weight: 800;
+  font-size: 16pt;
+}
+
+.flotaCardTitulo h4 {
+  font-weight: 400;
+  font-size: 10pt;
+}
+
+.flotaCardDescripcion {
+  color: #1D71B8;
+  font-weight: 400;
+  font-size: 12pt;
+  padding: 5px 0 10px 15px;
+}
+
+/*------ ATRIBUTOS SECCION PRINCIPALES CLIENTES DE LA EMPRESA ------*/
+.clientes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(207, 235, 250, 0.9764705882);
+  width: 100%;
+  border-radius: 25px;
+  margin: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clientes div p {
+  color: #1D71B8;
+  font-weight: 800;
+  font-size: 15pt;
+  padding: 5px 0 10px 15px;
+}
+
+.clientesLogos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.clientesLogos img {
+  width: 10rem;
+  padding: 5px 10px 25px 0;
+}
+
+/*------ ATRIBUTOS SECTION INFERIOR BODY INFO "EXCELENCIA" (INDEX) ------*/
+.infoDown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: rgba(166, 237, 250, 0.6862745098);
+  height: 400px;
+  width: 100%;
+}
+
+.infoDownTitulo {
+  font-family: "Roboto", sans-serif;
+  color: #0e0e5b;
+  font-weight: 700;
+  font-size: 30pt;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+}
+
+.infoDownCards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.InfoDownCardsPosition {
+  padding: 0;
+}
+
+.InfoDownCardsPosition img {
+  width: 225px;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.InfoDownCardsPosition img:hover {
+  color: rgb(6, 34, 42);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-filter: opacity(50%);
+          filter: opacity(50%);
+}
+
+.infoDownTextos {
+  color: #343964;
+  font-weight: 400;
+  font-size: 20pt;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*------ ATRIBUTOS GRILLA + FLEX INFERIOR DE PAGINA - DATOS CONTACTO + COPYRIGHT ------*/
+.gridFooter {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 10pt;
+  display: grid;
+  background-color: rgba(150, 184, 234, 0.7411764706);
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 3fr 1fr 1fr;
+  gap: 1px 1px;
+  padding: 0;
+  border: 10px;
+  grid-auto-flow: row;
+  grid-template-areas: "ubicacionTitulo horarioTitulo contactoTitulo" "ubicacionMapa horarioTexto contactoTexto" "ubicacionTexto ... redesSociales" "footerPage footerPage footerPage";
+  width: 100%;
+  height: 450px;
+}
+
+.gridFooter img {
+  width: 3rem;
+  height: 3rem;
+  padding: 2px 2px;
+}
+
+.ubicacionTitulo {
+  grid-area: ubicacionTitulo;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 15px;
+}
+
+/* CLASE APLICADA PARA CORREGIR ATRIBUTO HECHO POR BOOTSTRAP SOBRE <P> QUE NO ME PERMITE ALINEAR */
+.tituloParagraph {
+  margin-bottom: 0;
+}
+
+.tituloParagraphEstilo {
+  color: #1e3261;
+  font-weight: bold;
+  font-size: 15pt;
+  text-transform: uppercase;
+}
+
+.horarioTitulo {
+  grid-area: horarioTitulo;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contactoTitulo {
+  grid-area: contactoTitulo;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ubicacionMapa {
+  grid-area: ubicacionMapa;
+  justify-self: center;
+  align-self: center;
+}
+
+.horarioTexto {
+  grid-area: horarioTexto;
+  justify-self: center;
+  align-self: center;
+}
+
+.horarioTexto ul {
+  list-style-type: none;
+}
+
+.horarioTexto li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.contactoTexto {
+  grid-area: contactoTexto;
+  justify-self: center;
+  align-self: center;
+}
+
+.ubicacionContactoTexto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ubicacionContactoTexto img {
+  width: 30px;
+  height: 30px;
+}
+
+.ubicacionTexto {
+  grid-area: ubicacionTexto;
+  justify-self: center;
+  align-self: center;
+}
+
+.redesSociales {
+  grid-area: redesSociales;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*------ ATRIBUTOS CREDITOS DE AUTOR WEB TODAS LAS PAGINAS ------*/
+.footerPage {
+  grid-area: footerPage;
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  align-self: center;
+  padding: 10px;
+  color: azure;
+}
+
+/*---------                          --------*/
+/*--------- RESPONSIVE 480 px MOBILE --------*/
+/*---------                          --------*/
+@media screen and (max-width: 480px) {
+  header {
+    padding: 0 0 0 10px;
+    width: 100%;
+    height: 80px;
+  }
+  .cabeceraTitulo {
+    font-weight: 800;
+    font-size: 30pt;
+    top: 50%;
+    left: 5%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  .checkbtn {
+    display: block;
+  }
+  .menu-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  .headerLogo img {
+    height: 40px;
+  }
+  .navMenu ul {
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    background: rgba(193, 220, 240, 0.9647058824);
+    width: 100%;
+    height: 100vh;
+    right: 0;
+  }
+  .navMenu ul li {
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+  }
+  #check:checked ~ ul {
+    left: 0;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+  }
+  .infoDown {
+    height: 100%;
+  }
+  .infoDownTitulo {
+    font-weight: 300;
+    font-size: 15pt;
+    text-align: center;
+    padding: 5px;
+  }
+  .InfoDownCardsPosition {
+    -ms-flex-item-align: center;
+        align-self: center;
+    padding: 0;
+  }
+  .InfoDownCardsPosition img {
+    width: 100px;
+    -webkit-transition: 0.5s linear;
+    transition: 0.5s linear;
+  }
+  .InfoDownCardsPosition img:hover {
+    color: rgb(6, 34, 42);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+  .infoDownTextos {
+    color: #343964;
+    font-weight: 300;
+    font-size: 10pt;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .gridFooter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .ubicacionTitulo {
+    padding: 10px;
+  }
+  .tituloParagraphEstilo {
+    color: #1e3261;
+    font-weight: bold;
+    font-size: 10pt;
+    text-transform: uppercase;
+  }
+  .horarioTitulo {
+    padding: 10px;
+  }
+  .contactoTitulo {
+    padding: 10px;
+  }
+  .ubicacionMapa {
+    justify-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .horarioTexto {
+    justify-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .horarioTexto li {
+    text-align: center;
+  }
+  .contactoTexto {
+    justify-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .ubicacionContactoTexto {
+    text-align: center;
+  }
+  .ubicacionContactoTexto img {
+    width: 30px;
+    height: 30px;
+  }
+  .ubicacionTexto {
+    text-align: center;
+  }
+  .redesSociales {
+    background-color: #98efe6;
+    width: 100%;
+  }
+  .footerPage {
+    padding: 10px;
+    width: 100%;
+  }
+  .cardIzquierda {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2px;
+  }
+  .cardIzquierdaImagen {
+    width: 100%;
+    height: 60%;
+    padding: 10px;
+  }
+  .cardIzquierdaImagen img {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+  }
+  .cardIzquierdaTextos {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .cardIzquierdaTextosFondo {
+    background-color: rgba(184, 218, 255, 0.9764705882);
+    border-radius: 25px;
+  }
+  .cardIzquierda h1 {
+    font-weight: 600;
+    font-size: 20pt;
+    color: #1D71B8;
+  }
+  .cardIzquierda h4 {
+    font-weight: 200;
+    font-size: 10pt;
+    padding: 10px;
+  }
+  .cardDerecha {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2px;
+  }
+  .cardDerechaImagen {
+    width: 100%;
+    height: 60%;
+    padding: 10px;
+  }
+  .cardDerechaImagen img {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+  }
+  .cardDerechaTextos {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .cardDerechaTextosFondo {
+    background-color: rgba(184, 218, 255, 0.9764705882);
+    border-radius: 25px;
+  }
+  .cardDerecha h1 {
+    font-weight: 600;
+    font-size: 20pt;
+    color: #1D71B8;
+  }
+  .cardDerecha h4 {
+    font-weight: 200;
+    font-size: 10pt;
+    padding: 10px;
+  }
+  .cursosEscuela {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px 0 0 0;
+  }
+  .cursosEscuelaCard {
+    width: 90%;
+    margin: 25px;
+    font-family: "Roboto", sans-serif;
+  }
+  .cursosEscuelaCard img {
+    padding: 8px;
+    width: 70%;
+  }
+  .cursosEscuelaTitulo {
+    font-weight: 800;
+    font-size: 15pt;
+  }
+  .cursosEscuelaTexto {
+    font-weight: 300;
+    font-size: 10pt;
+    padding: 0 15%;
+  }
+  .requisitosEscuela {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .textoRequisitosEscuela {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .textoRequisitosEscuela ul {
+    width: 100%;
+  }
+  .testimonios {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .titleTestimonios p {
+    font-weight: 800;
+    font-size: 15pt;
+  }
+  .testimoniosEscuela {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .testimoniosEscuelaCard {
+    width: 90%;
+  }
+  .testimoniosEscuelaCard p {
+    font-size: 10pt;
+  }
+  .testimoniosEscuelaCardData img {
+    padding: 10px 15px 5px 25px;
+    width: 10vh;
+  }
+}
+/*---------                                     --------*/
+/*--------- RESPONSIVE 481 px - 768 px TABLET   --------*/
+/*---------                                     --------*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  header {
+    padding: 0 0 0 10px;
+    width: 100%;
+    height: 100px;
+  }
+  .cabeceraTitulo {
+    font-weight: 800;
+    font-size: 50pt;
+    top: 50%;
+    left: 5%;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+  }
+  .checkbtn {
+    display: block;
+  }
+  .menu-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+  .headerLogo img {
+    height: 60px;
+  }
+  .navMenu ul {
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    background: rgba(193, 220, 240, 0.9647058824);
+    width: 100%;
+    height: 100vh;
+    right: 0;
+  }
+  .navMenu ul li {
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+  }
+  #check:checked ~ ul {
+    left: 0;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+  }
+  .infoDown {
+    height: 100%;
+  }
+  .infoDownTitulo {
+    font-weight: 300;
+    font-size: 15pt;
+    text-align: center;
+    padding: 5px;
+  }
+  .InfoDownCardsPosition {
+    -ms-flex-item-align: center;
+        align-self: center;
+    padding: 0;
+  }
+  .InfoDownCardsPosition img {
+    width: 100px;
+    -webkit-transition: 0.5s linear;
+    transition: 0.5s linear;
+  }
+  .InfoDownCardsPosition img:hover {
+    color: rgb(6, 34, 42);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-filter: opacity(50%);
+            filter: opacity(50%);
+  }
+  .infoDownTextos {
+    color: #343964;
+    font-weight: 300;
+    font-size: 12pt;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .gridFooter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .ubicacionTitulo {
+    padding: 10px;
+  }
+  .tituloParagraphEstilo {
+    color: #1e3261;
+    font-weight: bold;
+    font-size: 10pt;
+    text-transform: uppercase;
+  }
+  .horarioTitulo {
+    padding: 10px;
+  }
+  .contactoTitulo {
+    padding: 10px;
+  }
+  .ubicacionMapa {
+    justify-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .horarioTexto {
+    justify-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .horarioTexto li {
+    text-align: center;
+  }
+  .contactoTexto {
+    justify-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .ubicacionContactoTexto {
+    text-align: center;
+  }
+  .ubicacionContactoTexto img {
+    width: 30px;
+    height: 30px;
+  }
+  .ubicacionTexto {
+    text-align: center;
+  }
+  .redesSociales {
+    background-color: #98efe6;
+    width: 100%;
+  }
+  .footerPage {
+    padding: 10px;
+    width: 100%;
+  }
+  .cardIzquierda {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2px;
+  }
+  .cardIzquierdaImagen {
+    width: 100%;
+    height: 60%;
+    padding: 10px;
+  }
+  .cardIzquierdaImagen img {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+  }
+  .cardIzquierdaTextos {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .cardIzquierdaTextosFondo {
+    background-color: rgba(184, 218, 255, 0.9764705882);
+    border-radius: 25px;
+  }
+  .cardIzquierda h1 {
+    font-weight: 600;
+    font-size: 25pt;
+    color: #1D71B8;
+  }
+  .cardIzquierda h4 {
+    font-weight: 200;
+    font-size: 10pt;
+    padding: 10px;
+  }
+  .cardDerecha {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2px;
+  }
+  .cardDerechaImagen {
+    width: 100%;
+    height: 60%;
+    padding: 10px;
+  }
+  .cardDerechaImagen img {
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+  }
+  .cardDerechaTextos {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+  .cardDerechaTextosFondo {
+    background-color: rgba(184, 218, 255, 0.9764705882);
+    border-radius: 25px;
+  }
+  .cardDerecha h1 {
+    font-weight: 600;
+    font-size: 20pt;
+    color: #1D71B8;
+  }
+  .cardDerecha h4 {
+    font-weight: 200;
+    font-size: 10pt;
+    padding: 10px;
+  }
+  .cursosEscuela {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 10px 0 0 0;
+  }
+  .cursosEscuelaCard {
+    width: 90%;
+    margin: 25px;
+    font-family: "Roboto", sans-serif;
+  }
+  .cursosEscuelaCard img {
+    padding: 8px;
+    width: 70%;
+  }
+  .cursosEscuelaTitulo {
+    font-weight: 800;
+    font-size: 15pt;
+  }
+  .cursosEscuelaTexto {
+    font-weight: 300;
+    font-size: 10pt;
+    padding: 0 15%;
+  }
+  .requisitosEscuela {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .textoRequisitosEscuela {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .textoRequisitosEscuela ul {
+    width: 100%;
+  }
+  .testimonios {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .titleTestimonios p {
+    font-weight: 800;
+    font-size: 15pt;
+  }
+  .testimoniosEscuela {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .testimoniosEscuelaCard {
+    width: 90%;
+  }
+  .testimoniosEscuelaCard p {
+    font-size: 10pt;
+  }
+  .testimoniosEscuelaCardData img {
+    padding: 10px 15px 5px 25px;
+    width: 10vh;
+  }
+}
