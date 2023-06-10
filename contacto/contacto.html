@@ -39,28 +39,89 @@
 
     </header>
 
-        <!-- CABECERA CON IMAGEN + TITULO PRINCIPAL DE PAGINA -->
+    <!-- CABECERA CON IMAGEN + TITULO PRINCIPAL DE PAGINA -->
 
-        <section class="cabeceraIndex">
+    <section class="cabeceraIndex">
 
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active controlImagen">
-                        <img src="../images/ImgCarrusel1.jpg" class="d-block w-100" alt="Bienvenidos a Bordo">
-                    </div>
-                    <div class="carousel-item controlImagen">
-                        <img src="../images/ImgCarrusel2.jpg" class="d-block w-100" alt="Bienvenidos a Bordo">
-                    </div>
-                    <div class="carousel-item controlImagen">
-                        <img src="../images/ImgCarrusel5.jpg" class="d-block w-100" alt="Bienvenidos a Bordo">
+        <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active controlImagen">
+                    <img src="../images/ImgCarrusel1.jpg" class="d-block w-100" alt="Bienvenidos a Bordo">
+                </div>
+                <div class="carousel-item controlImagen">
+                    <img src="../images/ImgCarrusel2.jpg" class="d-block w-100" alt="Bienvenidos a Bordo">
+                </div>
+                <div class="carousel-item controlImagen">
+                    <img src="../images/ImgCarrusel5.jpg" class="d-block w-100" alt="Bienvenidos a Bordo">
+                </div>
+            </div>
+        </div>
+        <div class="cabeceraTitulo">Contacto<br> Directo</div>
+
+    </section>
+
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <div class="content">
+        <div class="container">
+            <div class="row align-items-stretch no-gutters contact-wrap">
+                <div class="col-md-12">
+                    <div class="form h-100" class="TituloFormulario">
+                        <h3>Deje su consulta o comentario</h3>
+                        <form class="mb-5" method="" id="contactForm" name="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 form-group mb-3">
+                                    <label for="" class="col-form-label">Nombre</label>
+                                    <input type="text" class="form-control" name="name" id="name"
+                                        placeholder="Ingrese su nombre">
+                                </div>
+                                <div class="col-md-6 form-group mb-3">
+                                    <label for="" class="col-form-label">Email</label>
+                                    <input type="text" class="form-control" name="email" id="email"
+                                        placeholder="Ingrese su email">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 form-group mb-3">
+                                    <label for="budget" class="col-form-label">Área de consulta</label>
+                                    <select class="custom-select" id="budget" name="budget">
+                                        <option selected>Seleccione ...</option>
+                                        <option value="Escuela">Escuela de Vuelo</option>
+                                        <option value="Charter">Vuelos Chárter</option>
+                                        <option value="Ambulancia">Avión ambulancia</option>
+                                        <option value="Otros">Otros</option> 
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 form-group mb-3">
+                                    <label for="message" class="col-form-label">Mensaje / Consulta</label>
+                                    <textarea class="form-control" name="message" id="message" cols="30" rows="4"
+                                        placeholder="Dejénos su mensaje"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <input type="submit" value="Send Message"
+                                        class="btn btn-primary rounded-0 py-2 px-4">
+                                    <span class="submitting"></span>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div id="form-message-warning mt-4"></div>
+                        <div id="form-message-success">
+                            ¡ Gracias por su mensaje !
+                        </div>
+
                     </div>
                 </div>
             </div>
-            <div class="cabeceraTitulo">Contacto<br> Directo</div>
+        </div>
 
-        </section>
-
-        <p>FORMULARIO DE CONTACTO EN CONSTRUCCION PARA VERSION FINAL</p>
+    </div>
 
     <footer>
         <!-- FOOTER CON DATOS DE LOCALIZACIÓN, HORARIOS Y CONTACTOS/ FORMATO GRILLA + FLEX -->
@@ -94,7 +155,7 @@
             <div class="contactoTitulo">
                 <img src="../images/iconoContacto.png" alt="Titulo Ubicación">
                 <p class="tituloParagraph tituloParagraphEstilo">Contacto</p>
-            </div>           
+            </div>
             <div class="contactoTexto">
                 <div class="ubicacionContactoTexto">
                     <img src="../images/iconoTelefono.png" alt="Telefono">
@@ -127,4 +188,5 @@
         crossorigin="anonymous"></script>
 
 </body>
+
 </html>
