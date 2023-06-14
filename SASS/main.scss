@@ -706,7 +706,7 @@ label.error {
     color: #000;
 }
 
-.TituloFormulario h3{
+.TituloFormulario h3 {
     color: #1D71B8;
     font-weight: 800;
     font-size: 14pt;
@@ -799,7 +799,7 @@ label.error {
     }
 
     .infoDownTitulo {
-        font-weight: 300;
+        font-weight: 400;
         font-size: 15pt;
         text-align: center;
         padding: 5px;
@@ -823,7 +823,7 @@ label.error {
 
     .infoDownTextos {
         color: #343964;
-        font-weight: 300;
+        font-weight: 400;
         font-size: 10pt;
         text-transform: uppercase;
         text-align: center;
@@ -931,7 +931,7 @@ label.error {
 
     .cardIzquierda h1 {
         font-weight: 600;
-        font-size: 20pt;
+        font-size: 16pt;
         color: #1D71B8;
     }
 
@@ -974,7 +974,7 @@ label.error {
 
     .cardDerecha h1 {
         font-weight: 600;
-        font-size: 20pt;
+        font-size: 16pt;
         color: #1D71B8;
     }
 
@@ -983,6 +983,81 @@ label.error {
         font-size: 10pt;
         padding: 10px;
     }
+
+
+    /*------ ATRIBUTOS SECTION FLOTA DE LA ESCUELA/EMPRESA ------*/
+    .flota {
+        flex-direction: column;
+        padding-top: 20px;
+        align-items: center;
+    }
+
+    .flotaCard {
+        background-color: #b8dafff9;
+        border-radius: 25px;
+        width: 90%;
+    }
+
+    .flotaCard img {
+        width: 90%;
+        align-self: center;
+    }
+
+    .flotaCardTitulo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 10px 0 20px;
+    }
+
+    .flotaCardTitulo h2 {
+        color: #1D71B8;
+        font-weight: 800;
+        font-size: 15pt;
+    }
+
+    .flotaCardTitulo h4 {
+        font-weight: 400;
+        font-size: 10pt;
+    }
+
+    .flotaCardDescripcion {
+        color: #1D71B8;
+        font-weight: 400;
+        font-size: 10pt;
+        padding: 5px 0 10px 15px;
+    }
+
+
+    /*------ ATRIBUTOS SECCION PRINCIPALES CLIENTES DE LA EMPRESA ------*/
+    .clientes {
+        background-color: #cfebfaf9;
+        width: 90%;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .clientes div p {
+        color: #1D71B8;
+        font-weight: 800;
+        font-size: 12pt;
+        padding: 5px 0 8px 0px;
+    }
+
+    .clientesLogos img {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .clientesLogos img {
+        width: 5rem;
+        padding: 3px 3px 15px 3px;
+    }
+
+
 
     .cursosEscuela {
         display: flex;
@@ -1387,4 +1462,106 @@ label.error {
         padding: 10px 15px 5px 25px;
         width: 10vh;
     }
+
+
+    .clientes {
+        display: flex;
+        flex-direction: column;
+        background-color: #cfebfaf9;
+        width: 100%;
+        border-radius: 25px;
+        margin: 10px;
+        align-items: center;
+    }
+
+    .clientes div p {
+        color: #1D71B8;
+        font-weight: 800;
+        font-size: 10pt;
+        padding: 5px 0 10px 15px;
+    }
+
+    .clientesLogos {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .clientesLogos img {
+        width: 5rem;
+        padding: 5px 10px 25px 0;
+    }
+
+    /*------ ATRIBUTOS SECTION FLOTA DE LA ESCUELA/EMPRESA ------*/
+    .flota {
+        flex-direction: column;
+        padding-top: 20px;
+        align-items: center;
+    }
+
+    .flotaCard {
+        background-color: #b8dafff9;
+        border-radius: 25px;
+        width: 90%;
+    }
+
+    .flotaCard img {
+        width: 90%;
+        align-self: center;
+    }
+
+    .flotaCardTitulo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 10px 0 20px;
+    }
+
+    .flotaCardTitulo h2 {
+        color: #1D71B8;
+        font-weight: 800;
+        font-size: 15pt;
+    }
+
+    .flotaCardTitulo h4 {
+        font-weight: 400;
+        font-size: 10pt;
+    }
+
+    .flotaCardDescripcion {
+        color: #1D71B8;
+        font-weight: 400;
+        font-size: 10pt;
+        padding: 5px 0 10px 15px;
+    }
+
+
+    /*------ ATRIBUTOS SECCION PRINCIPALES CLIENTES DE LA EMPRESA ------*/
+    .clientes {
+        background-color: #cfebfaf9;
+        width: 90%;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .clientes div p {
+        color: #1D71B8;
+        font-weight: 800;
+        font-size: 12pt;
+        padding: 5px 0 8px 0px;
+    }
+
+    .clientesLogos img {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    .clientesLogos img {
+        width: 5rem;
+        padding: 3px 3px 15px 3px;
+    }
+
+
 }
